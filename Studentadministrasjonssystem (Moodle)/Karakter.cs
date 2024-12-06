@@ -9,18 +9,15 @@ namespace Studentadministrasjonssystem__Moodle_
     internal class Karakter
     {
         int _karakterVerdi;
-        string _karakterStudent;
+        Student _karakterStudent;
         string _karakterFag;
-        public Karakter(int karakterVerdi, string karakterStudent, string karakterFag)
+        public Karakter(int karakterVerdi, string navn, int alder, int studentId)
         {
             _karakterVerdi = karakterVerdi;
-            _karakterStudent = karakterStudent;
-            _karakterFag = karakterFag;
+            _karakterStudent = new Student(navn, alder, studentId);
+            //_karakterStudent = karakterStudent;
+            //_karakterFag = karakterFag;
         }
-        public void getKarakterInfo()
-        {
-            var karakter1 = new Karakter( 1,  "Peter Parker",  "NK");
-
-        }
+        
     }
 }
